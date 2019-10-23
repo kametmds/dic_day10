@@ -62,6 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # dic_day10
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.11'
 gem 'slim-rails'
 gem 'html2slim'
