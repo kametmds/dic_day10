@@ -11,6 +11,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.user_id = current_user.id
     if @blog.save
       redirect_to blogs_path
       flash[:notice] = "作成しました"
@@ -42,6 +43,7 @@ class BlogsController < ApplicationController
   end
 
   private
+
   def set_blog
     @blog = Blog.find(params[:id])
   end

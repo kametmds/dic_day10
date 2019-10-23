@@ -1,10 +1,10 @@
 = form_with(model: @blog, lcoal:true) do |f|
   div
-    =f.label :title
-    =f.text_field :title
+    = f.label :title
+    = f.text_field :title
   div
-    =f.label :content
-    =f.text_area :content
+    = f.label :content
+    = f.text_area :content
   div
     = f.submit "登録"
     = link_to "戻る", blogs_path
