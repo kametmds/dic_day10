@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-    # @user = User.new
   end
 
   def create
@@ -10,8 +9,8 @@ class SessionsController < ApplicationController
       redirect_to blogs_path
       flash[:notice] = "ログインしました"
     else
-      flash.now[:danger] = 'ログインに失敗しました'
-      render :new
+      flash[:danger] = 'ログインに失敗しました'
+      render 'new'
     end
   end
 
