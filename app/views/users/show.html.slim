@@ -1,0 +1,14 @@
+h1 ユーザの詳細
+
+table.table.table-hover
+  tbody
+    tr
+      th メールアドレス
+      td = @user.email
+    tr
+      th 名前
+      td = @user.name
+    tr
+
+= link_to '編集', edit_user_path(@user), class: 'btn btn-primary mr-3'
+= link_to '削除', user_path(@user), method: :delete, data: { confirm: "ユーザ「#{@user.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
