@@ -1,0 +1,12 @@
+h1
+  | Blogs一覧
+= link_to "New Blog", new_blog_path
+- @blogs.each do |blog|
+  p
+    | Title: 
+    = blog.title
+  p
+    | Content: 
+    = blog.content
+  = link_to "Show", blog_path(blog)
+  = link_to 'Delete', blog_path(blog), method: :delete, data: {confirm: "削除しますか？"}

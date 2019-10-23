@@ -5,8 +5,8 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:@password])
-      log_in
+    if user && user.authenticate(params[:session][:password])
+      #log_in
       redirect_to blogs_path
       flash[:notice] = "ログインしました"
     else
